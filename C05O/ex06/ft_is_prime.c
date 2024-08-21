@@ -12,21 +12,22 @@
 
 int	ft_is_prime(int nb)
 {
-	int	i;
+	long long	i;
 
-	i = 2;
-	if (nb < 0 || nb == 1)
+	if (nb <= 1)
 		return (0);
-	while (i < nb)
+	if (nb == 2 || nb == 3)
+		return (1);
+	if (nb % 2 == 0 || nb % 3 == 0)
+		return (0);
+	i = 5;
+	while (i * i <= (long long)nb)
 	{
-		if (nb % i == 0)
+		if (nb % i == 0 || nb % (i + 2) == 0)
 			return (0);
-		i++;
+		i += 6;
+		if (i > 46340)
+			break ;
 	}
 	return (1);
 }
-// int main ()
-// {
-// 	ft_is_prime(5);
-// 	return (0); 
-// }

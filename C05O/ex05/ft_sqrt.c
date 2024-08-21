@@ -12,18 +12,23 @@
 
 int	ft_sqrt(int nb)
 {
-	int	i;
+	int	left;
+	int	right;
+	int	mid;
 
-	i = nb;
-	if (nb < 0)
+	if (nb <= 0)
 		return (0);
-	while (i > 0)
+	left = 1;
+	right = nb;
+	while (left <= right)
 	{
-		if ((i * i) == nb)
-		{
-			return (i);
-		}
-		i--;
+		mid = left + (right - left) / 2;
+		if (mid == nb / mid && nb % mid == 0)
+			return (mid);
+		if (mid <= nb / mid)
+			left = mid + 1;
+		else
+			right = mid -1;
 	}
 	return (0);
 }

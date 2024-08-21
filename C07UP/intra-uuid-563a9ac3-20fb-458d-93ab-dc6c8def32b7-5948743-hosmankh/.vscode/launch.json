@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/hosmankh/42upd/42/C07UP/intra-uuid-563a9ac3-20fb-458d-93ab-dc6c8def32b7-5948743-hosmankh/ex03",
+      "program": "/Users/hosmankh/42upd/42/C07UP/intra-uuid-563a9ac3-20fb-458d-93ab-dc6c8def32b7-5948743-hosmankh/ex03/build/Debug/outDebug"
+    }
+  ]
+}
